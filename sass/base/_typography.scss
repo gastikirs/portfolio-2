@@ -1,0 +1,59 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .heading-primary {
+    text-transform: uppercase;
+    letter-spacing: 1.7rem;
+    color: $color-grey;
+    font-size: 3.5rem;
+    font-weight: 300;
+    display: inline-block;
+
+    &--big {
+        font-size: 4.5rem;
+    }
+
+    &--main {
+        opacity: 0;
+        animation-name: appearOpacity;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-delay: .2s;
+        animation-fill-mode: forwards;
+    }
+
+    &--orange {
+        color: $color-orange;
+    }
+  }
+
+  .heading-secondary {
+    font-family: 'Press Start 2P', cursive;
+    color: $color-grey;
+    font-size: 1.3rem;
+    letter-spacing: .5rem;
+
+    &--submain {
+        opacity: 0;
+        animation-name: appearFromBot;
+        animation-duration: .5s;
+        animation-timing-function: ease-out;
+        animation-delay: .5s;
+        animation-fill-mode: forwards;
+    }
+
+
+  }
+
+  .heading-tertiary {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: $color-grey;
+    font-size: 3.5rem;
+    font-weight: 500;
+    display: inline-block;
+
+}
