@@ -1,0 +1,35 @@
+.section-works {
+  padding-top: 35rem;
+  padding-bottom: 0rem;
+  // -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 92%, 0 100%);
+  // clip-path: polygon(0 0%, 100% 0%, 100% 92%, 0 100%);
+
+  @include respond(tab-port) {
+    padding-top: 15rem;
+    padding-bottom: 0rem;
+  
+  }
+
+}
+
+.section-about {
+  padding: 30rem 10rem;
+  padding-bottom: 30rem;
+
+  @include respond(tab-port) {
+    padding: 10rem 0rem;
+  }
+}
+
+.section-contact {
+  padding: 25rem 10rem;
+  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+
+  @include respond(tab-port) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  
+  }
+
+}

@@ -1,59 +1,72 @@
 body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.heading-primary {
+  font-size: 7.5rem;
+  font-weight: 500;
+
+  @include respond(tab-port) {
+    font-size: 4rem;
   }
 
-  .heading-primary {
-    text-transform: uppercase;
-    letter-spacing: 1.7rem;
-    color: $color-grey;
-    font-size: 3.5rem;
-    font-weight: 300;
-    display: inline-block;
+  &--main {
+    // opacity: 0;
+    // animation: appearOpacity;
+    // animation-duration: 1s;
+    // animation-fill-mode: forwards;
+    // backface-visibility: 'hidden';
+  }
+}
 
-    &--big {
-        font-size: 4.5rem;
-    }
+.heading-secondary {
+  font-size: 5rem;
+  font-weight: 200;
 
-    &--main {
-        opacity: 0;
-        animation-name: appearOpacity;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-        animation-delay: .2s;
-        animation-fill-mode: forwards;
-    }
-
-    &--orange {
-        color: $color-orange;
-    }
+  @include respond(tab-port) {
+    font-size: 3rem;
   }
 
-  .heading-secondary {
-    font-family: 'Press Start 2P', cursive;
-    color: $color-grey;
-    font-size: 1.3rem;
-    letter-spacing: .5rem;
+  &--main {
+    // opacity: 0;
+    // animation: appearOpacity;
+    // animation-duration: 1s;
+    // animation-delay: .3s;
+    // animation-fill-mode: forwards;
+    // backface-visibility: 'hidden';
+  }
+}
 
-    &--submain {
-        opacity: 0;
-        animation-name: appearFromBot;
-        animation-duration: .5s;
-        animation-timing-function: ease-out;
-        animation-delay: .5s;
-        animation-fill-mode: forwards;
-    }
+.heading-tertiary {
+  font-size: 6rem;
+  font-weight: 100;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
 
-
+  &--smaller {
+    font-size: 4rem;
   }
 
-  .heading-tertiary {
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    color: $color-grey;
-    font-size: 3.5rem;
-    font-weight: 500;
-    display: inline-block;
+  &--inverted {
+    background-color: $color-black;
+    color: $color-white;
+  }
 
+  @include respond(phone-big) {
+    font-size: 4rem;
+  }
+}
+
+.heading-quar {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+}
+
+.default-p {
+  font-size: 2rem;
+  line-height: 4.5rem;
 }

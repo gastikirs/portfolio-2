@@ -1,0 +1,59 @@
+.aboutme {
+  visibility: hidden; //for reveal
+
+  &__image-pic {
+    width: 45rem;
+    border-radius: 3px;
+    transition: all 0.2s;
+
+    @include respond(tab-port) {
+      width: 50%;
+    }
+  }
+
+  &__container {
+    padding-top: 7rem;
+    margin: 0 auto;
+
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 60rem;
+    grid-gap: 5rem;
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+    }
+  }
+
+  &__right__network {
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    align-items: center;
+
+    &-item {
+      margin: 0 auto;
+      width: 6.5rem;
+      height: 6.5rem;
+      transition: all 0.2s;
+      &:hover {
+        fill: $color-orange;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__left {
+    @include respond(tab-port) {
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+}

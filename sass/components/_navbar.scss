@@ -1,0 +1,110 @@
+.navbar-icon {
+  position: relative;
+}
+
+.navbar__icon-box {
+  cursor: pointer;
+
+  position: fixed;
+  top: 2%;
+  right: 3%;
+  z-index: 999999;
+
+  & > * {
+    width: 4rem;
+    height: 0.5rem;
+    background-color: $color-black;
+    margin: 0.6rem 0;
+    transition: 0.4s;
+  }
+}
+
+.navbar__icon-box.active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.navbar__icon-box.active .navbar__icon:nth-child(1),
+.navbar__icon-box.active .navbar__icon:nth-child(3) {
+  transition: transform 0.3s ease-in-out 0.3s,
+    background-color 0.3s ease-in-out 0.8s;
+}
+
+.navbar__icon-box .navbar__icon:nth-child(2) {
+  transform-origin: center center;
+}
+
+.navbar__icon-box.active .navbar__icon:nth-child(2) {
+  transform-origin: center center;
+  width: 0px;
+}
+
+.navbar__icon-box.active .navbar__icon:nth-child(1) {
+  transform: translateY(9.5px);
+  background-color: $color-white;
+}
+
+.navbar__icon-box.active .navbar__icon:nth-child(3) {
+  transform: translateY(-13px) rotate(90deg);
+  background-color: $color-white;
+}
+
+// NAVBAR
+
+.navbar {
+  z-index: 9999;
+  top: 0;
+  left: -100%;
+  position: fixed;
+
+  width: 100%;
+  background-color: rgba($color-black, 0.8);
+  color: $color-white;
+  visibility: hidden;
+  transition: all 0.6s 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
+  &__list {
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    padding: 2rem;
+    justify-content: center;
+    text-transform: uppercase;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    a,
+    a:visited,
+    a:hover {
+      text-decoration: none;
+      color: $color-white;
+      transition: all 0.3s;
+    }
+
+    a:hover {
+      color: $color-orange;
+    }
+
+    &:not(:last-child) {
+      margin-right: 5rem;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.navbar.active {
+  left: 0%;
+  visibility: visible;
+}

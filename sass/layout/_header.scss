@@ -1,0 +1,58 @@
+.header {
+    height: 95vh;
+    background-color: $color-white;
+    width: 100%;
+    position: relative;
+
+    &__hero {
+        text-align: left;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 0 1rem;
+        }
+        
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include respond(tab-port) {
+            top: 82%;
+        }
+
+      
+    }
+
+    &__arrow-icon {
+        width: 8rem;
+        height: 8rem;
+        animation: UpAndDown 2s infinite;
+        transition: all .2s;
+
+        &:hover {
+            fill: $color-orange;
+            cursor: pointer;
+        }
+
+        @include respond(tab-port) {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+    &__triangle {
+        position: absolute;
+        top: 99%;
+        left: 50%;
+        transform: translateX(-52%);
+        z-index: 999;
+    }
+}

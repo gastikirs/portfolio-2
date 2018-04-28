@@ -1,0 +1,113 @@
+.form {
+  height: 55rem;
+  width: 50%;
+  padding: 3rem;
+  background-image: linear-gradient(
+    105deg,
+    rgba($color-white, 0.9) 0%,
+    rgba($color-white, 0.9) 80%,
+    $color-grey 80%
+  );
+  background-size: 100%;
+
+  box-shadow: 0rem 1rem 1rem rgba($color-black, 0.1);
+
+  @include respond(tab-port) {
+    width: 100%;
+    background-image: none;
+    background-color: $color-white;
+  }
+
+  &__group {
+    backface-visibility: hidden;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 3.5rem;
+    }
+
+    &:last-child {
+        margin-left: 3rem;
+    }
+  }
+
+  &__title {
+    display: inline;
+    padding: 1rem;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+  }
+
+  &__separator {
+    margin-bottom: 5rem;
+  }
+
+  &__input {
+    padding: 2rem 1rem;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid $color-black;
+    transition: all 0.2s;
+    font-family: inherit;
+    color: inherit;
+    resize: none;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: 1.2rem;
+      transition: all 0.2s;
+    }
+  }
+
+  &__input + &__label {
+    backface-visibility: hidden;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    position: absolute;
+    top: 0.1rem;
+    left: 0;
+    padding: 2rem 0.8rem;
+  }
+
+  &__label:hover {
+    cursor: auto;
+  }
+
+  &__input--text + &__label {
+    top: 1rem;
+  }
+
+  &__input:focus:invalid {
+    border-bottom: 1px solid #e74c3c;
+  }
+
+  &__input:valid {
+    border-bottom: 1px solid #2ecc71;
+  }
+
+  &__input:valid + &__label,
+  &__input:focus + &__label {
+    transform: translateY(-2.5rem);
+  }
+
+  &__input--text:valid + &__label,
+  &__input--text:focus + &__label {
+    transform: translateY(-3.5rem);
+  }
+}
+
+.btn__form-container {
+  @include respond(tab-port) {
+  display: flex;
+  justify-content: center;
+  }
+}
