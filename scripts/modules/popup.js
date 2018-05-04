@@ -33,11 +33,15 @@ class Popup {
       }
     });
 
-    $(document).click(() => {
+    $(document).click((e) => {
       if (!this.is_mobile) {
-        this.popup.fadeOut("fast");
-        this.iframe.attr("src", "");
-        this.blackOverlay.fadeOut("fast");
+        if(e.target.className !== "popup") {
+          this.popup.fadeOut("medium");
+          this.blackOverlay.fadeOut("medium", () => {
+            this.iframe.attr("src", "");
+          });
+        }
+
       }
     });
   }

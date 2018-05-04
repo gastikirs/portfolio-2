@@ -528,7 +528,7 @@ body {
         font-size: 1rem;
         padding: .5rem 1.5rem;
         position: absolute;
-        top: 70%;
+        top: 80%;
         transform: translate(-50%, -50%);
         opacity: 1;
         visibility: visible; } }
@@ -577,6 +577,9 @@ body {
     border-radius: 3px;
     margin-bottom: 3rem;
     border: 0.5rem solid #393939; }
+  .popup__description {
+    width: 60%;
+    line-height: 4rem; }
   .popup__cross {
     position: absolute;
     top: -2%;
