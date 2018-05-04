@@ -11,6 +11,8 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
 
+
+
     <title>Gastón Kirsman &mdash; Web Developer</title>
 </head>
 
@@ -49,6 +51,8 @@
 
     <main class="main">
 
+        <div class="black-overlay"></div>
+
 
 
 
@@ -79,42 +83,43 @@
                 <div class="gamebox gamebox--bigbox gamebox--bigbox--1 gamebox--left">
                     <img class="gamebox__image" src="img/abundanceSpell.png" alt="Abundance Spell">
                     <h3 class="gamebox__caption">Abundance Spell</h3>
-                    <a href="#" class="gamebox__btn">Play</a>
+                    <a href="#" id="abundance" class="gamebox__btn game-abundance game">Play</a>
                 </div>
                 <div class="gamebox gamebox--small gamebox--small--1 gamebox--right">
-                    <img src="img/revivingLove.png" alt="revivingLove">
+                    <img class="gamebox__image" src="img/revivingLove.png" alt="revivingLove">
                     <h3 class="gamebox__caption">Reviving Love</h3>
-                    <a href="#" class="gamebox__btn">Play</a>
+                    <a href="#" id="reviving" class="gamebox__btn game-reviving game">Play</a>
                 </div>
                 <div class="gamebox gamebox--small gamebox--small--2 gamebox--right">
-                    <img src="img/chestOfFortunes.png" alt="chestOfFortunes">
+                    <img class="gamebox__image" src="img/chestOfFortunes.png" alt="chestOfFortunes">
                     <h3 class="gamebox__caption">Chest of Fortunes</h3>
-                    <a href="#" class="gamebox__btn">Play</a>
+                    <a href="#" class="gamebox__btn game-fortunes game">Play</a>
                 </div>
                 <div class="gamebox gamebox--bigbox gamebox--bigbox--2 gamebox--right">
-                    <img src="img/fourWinningDirections.png" alt="fourWinningDirections">
-                    <h3 class="gamebox__caption">4 Winning Directions</h3>
-                    <a href="#" class="gamebox__btn">Play</a>
+                    <img class="gamebox__image" src="img/fourWinningDirections.png" alt="fourWinningDirections">
+                    <h3 class="gamebox__caption">4 Winning
+                        <br> Directions</h3>
+                    <a href="#" class="gamebox__btn game-directions game">Play</a>
                 </div>
                 <div class="gamebox gamebox--small gamebox--small--3 gamebox--left">
-                    <img src="img/lilith.png" alt="lilith">
+                    <img class="gamebox__image" src="img/lilith.png" alt="lilith">
                     <h3 class="gamebox__caption">Lilith's Passion</h3>
-                    <a href="#" class="gamebox__btn">Play</a>
+                    <a href="#" class="gamebox__btn game-lilith game">Play</a>
                 </div>
                 <div class="gamebox gamebox--small gamebox--small--4 gamebox--left">
-                    <img src="img/reactweather.png" alt="reactweather">
+                    <img class="gamebox__image" src="img/reactweather.png" alt="reactweather">
                     <h3 class="gamebox__caption">React Simple Weather App</h3>
-                    <a href="#" class="gamebox__btn">See</a>
+                    <a href="#" class="gamebox__btn app-react app">See</a>
                 </div>
                 <div class="gamebox gamebox--bigbox gamebox--bigbox--3 gamebox--left">
-                    <img src="img/natours.png" alt="natours">
+                    <img class="gamebox__image" src="img/natours.png" alt="natours">
                     <h3 class="gamebox__caption">Natours</h3>
-                    <a href="#" class="gamebox__btn">See</a>
+                    <a href="#" class="gamebox__btn app-natours app">See</a>
                 </div>
                 <div class="gamebox gamebox--bigbox gamebox--bigbox--4 gamebox--right">
-                    <img src="img/trillo.png" alt="Abundance Spell">
+                    <img class="gamebox__image" src="img/trillo.png" alt="Abundance Spell">
                     <h3 class="gamebox__caption">Trillo</h3>
-                    <a href="#" class="gamebox__btn">See</a>
+                    <a href="#" class="gamebox__btn app-trillo app">See</a>
                 </div>
             </div>
         </section>
@@ -130,21 +135,30 @@
                         <img src="img/me.jpg" alt="" class="aboutme__image-pic">
                     </div>
                     <div class="aboutme__right">
-                        <h3 class="heading-quar">So... let's talk.</h3>
-                        <p class="default-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore nisi maiores corrupti, quisquam
+                        <h3 class="heading-quar">So... yeah.</h3>
+                        <p class="default-p">As you can guess, my name is Gaston Kirman. I was born in Buenos Aires, Argentina, and then moved
+                            to Tel Aviv, Israel. I currently work as a HTML5 Games Developer, but I also love Web Design
+                            and Front End development. I have a diverse set of skills, ranging from HTML + CSS design, Photoshop,
+                            After Effects, Flash, Javascript (with libraries such as React or frameworks like Angular 2+),
+                            all the way to engines for making games like Construct 2. You can contact me through the following
+                            social networks. I speak spanish, english and hebrew fluently :)
+                        </p>
+
+                        <!-- <p class="default-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore nisi maiores corrupti, quisquam
                             quas velit voluptatibus natus veniam id soluta! Vitae, fugiat! Eligendi voluptatibus libero ratione
                             fuga velit vitae doloribus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
                             sint illo aperiam assumenda odit ipsum quis sequi ipsa expedita blanditiis placeat, fuga aliquid
-                            adipisci doloribus aut officia, iste reiciendis explicabo.</p>
+                            adipisci doloribus aut officia, iste reiciendis explicabo.</p> -->
                         <div class="aboutme__right__network">
                             <svg class=aboutme__right__network-item>
-                                <use xlink:href="img/Icons/sprite.svg#icon-linkedin-with-circle"></use>
+                                <a target="_blank" href="https://www.linkedin.com/in/gast%C3%B3n-kirsman-1a575130/">
+                                    <use xlink:href="img/Icons/sprite.svg#icon-linkedin-with-circle"></use>
+                                </a>
                             </svg>
                             <svg class=aboutme__right__network-item>
-                                <use xlink:href="img/Icons/sprite.svg#icon-facebook"></use>
-                            </svg>
-                            <svg class=aboutme__right__network-item>
-                                <use xlink:href="img/Icons/sprite.svg#icon-skype"></use>
+                                <a target="_blank" href="https://www.facebook.com/gastonrhoads">
+                                    <use xlink:href="img/Icons/sprite.svg#icon-facebook"></use>
+                                </a>
                             </svg>
                         </div>
 
@@ -156,7 +170,7 @@
         </section>
 
         <section class="section-contact" id="section-contact">
-            <form action="#" class="form">
+            <form action="https://formspree.io/gaston.kirsman@gmail.com" method="POST" class="form">
                 <h3 class="heading-tertiary heading-tertiary--smaller heading-tertiary--inverted form__title u-margin-bottom-huge">
                     Lets get in touch
                 </h3>
@@ -166,8 +180,8 @@
                     <label for="name" class="form__label">Name</label>
                 </div>
                 <div class="form__group">
-                    <input type="text" class="form__input" id="email" name="email" required>
-                    <label for="email" class="form__label">Email</label>
+                    <input type="text" class="form__input" id="email" name="_replyto" required>
+                    <label for="_replyto" class="form__label">Email</label>
                 </div>
                 <div class="form__group">
                     <textarea cols="10" rows="3" class="form__input form__input--text" id="message" name="message" required></textarea>
@@ -176,7 +190,7 @@
                 <div class="form__group">
 
                     <div class="btn__form-container">
-                        <button class="btn btn__form">
+                        <button type="submit" value="Send" class="btn btn__form">
                             <svg class="btn__svg">
                                 <use xlink:href="img/Icons/sprite.svg#icon-direction"></use>
                             </svg>
@@ -189,7 +203,15 @@
 
     </main>
 
+    <div class="popup">
+        <div class="popup__cross">&Cross;</div>
+        <h1 class="heading-tertiary heading-tertiary--smaller popup__title u-margin-bottom-medium">Abundance Spell</h1>
+        <iframe class="popup__game" src="" frameborder="0"></iframe>
+        <p class="popup__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum repellat dolorum laboriosam optio facere, excepturi sunt ea laudantium voluptatum, distinctio voluptatem commodi neque quod quis necessitatibus velit debitis, eius molestiae?</p>
+    </div>
+
     <script src="app/temp/scripts/App.js"></script>
+
 
 </body>
 

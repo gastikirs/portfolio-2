@@ -215,7 +215,7 @@ body {
     margin-top: 2rem;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     align-items: center; }
     .aboutme__right__network-item {
@@ -326,7 +326,7 @@ body {
   height: 55rem;
   width: 50%;
   padding: 3rem;
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 80%, #f4f7f7 80%);
+  background-image: linear-gradient(130deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 80%, #f4f7f7 80%);
   background-size: 100%;
   box-shadow: 0rem 1rem 1rem rgba(57, 57, 57, 0.1); }
   @media only screen and (max-width: 56.25em) {
@@ -416,7 +416,7 @@ body {
         left: 0;
         transform: translateX(-50%); } }
   .btn:hover .btn__svg {
-    transform: scale(1.5); }
+    transform: scale(1.5) rotate(360deg); }
   .btn__svg {
     transition: all .2s;
     height: 2rem;
@@ -430,7 +430,8 @@ body {
   padding-top: 10rem 0; }
   @media only screen and (max-width: 56.25em) {
     .gameboxes {
-      padding: 0; } }
+      padding: 0;
+      grid-template-rows: repeat(6, 15rem); } }
 
 .gamebox {
   backface-visibility: hidden;
@@ -439,10 +440,9 @@ body {
   border: 0.5px solid #f4f7f7;
   visibility: hidden; }
   .gamebox__image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    margin: 0 auto;
+    width: 100%;
+    height: 100%; }
   .gamebox--bigbox {
     height: 50rem; }
     .gamebox--bigbox--1 {
@@ -453,6 +453,9 @@ body {
       grid-area: big-3; }
     .gamebox--bigbox--4 {
       grid-area: big-4; }
+    @media only screen and (max-width: 56.25em) {
+      .gamebox--bigbox {
+        height: 30rem; } }
   .gamebox--left {
     border-left: none; }
   .gamebox--right {
@@ -468,6 +471,9 @@ body {
       grid-area: small-3; }
     .gamebox--small--4 {
       grid-area: small-4; }
+    @media only screen and (max-width: 56.25em) {
+      .gamebox--small {
+        height: 15rem; } }
   .gamebox__caption {
     position: absolute;
     top: 50%;
@@ -483,10 +489,18 @@ body {
     letter-spacing: 2rem;
     opacity: 100;
     transition: all 0.3s; }
-    @media only screen and (max-width: 40.125em) {
+    @media only screen and (max-width: 56.25em) {
       .gamebox__caption {
         font-size: 1.5rem;
         letter-spacing: 1rem; } }
+    @media only screen and (max-width: 40.125em) {
+      .gamebox__caption {
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .gamebox__caption {
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem; } }
   .gamebox__btn {
     text-transform: uppercase;
     border-radius: 3px;
@@ -508,6 +522,15 @@ body {
     transition: all 0.4s; }
     .gamebox__btn:hover {
       color: #FF7F5B; }
+    @media only screen and (max-width: 75em) {
+      .gamebox__btn {
+        font-size: 1rem;
+        padding: .5rem 1.5rem;
+        position: absolute;
+        top: 70%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        visibility: visible; } }
   .gamebox::after {
     content: "";
     position: absolute;
@@ -525,3 +548,53 @@ body {
     top: 50%;
     visibility: visible;
     opacity: 100; }
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0rem 0.5rem 4rem rgba(57, 57, 57, 0.7);
+  padding: 6rem 5rem;
+  padding-top: 3rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  z-index: 9999999;
+  display: none;
+  opacity: 1;
+  height: 90vh; }
+  @media only screen and (max-width: 760px) {
+    .popup {
+      opacity: 0; } }
+  .popup__game {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    margin-bottom: 3rem;
+    border: 0.5rem solid #393939; }
+  .popup__cross {
+    position: absolute;
+    top: -2%;
+    right: 1%;
+    font-size: 6rem;
+    color: currentColor;
+    transition: all 0.2s;
+    backface-visibility: hidden; }
+    .popup__cross:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      color: #FF7F5B; }
+
+.black-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.8);
+  display: none; }

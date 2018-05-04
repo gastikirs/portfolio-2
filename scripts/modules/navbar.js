@@ -5,7 +5,6 @@ class Navbar {
 	this.menuIcon = $(".navbar__icon-box");
 	this.navbar = $(".navbar");
 
-	console.log(this.menuIcon);
     this.events();
   }
 
