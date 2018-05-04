@@ -5,6 +5,7 @@
     width: 45rem;
     border-radius: 3px;
     transition: all 0.2s;
+    image-orientation: from-image;
 
     @include respond(tab-port) {
       width: 50%;
@@ -29,13 +30,15 @@
   }
 
   &__right__network {
+
     margin-top: 2rem;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 15rem);
     grid-template-rows: 1fr;
+    justify-content: center;
 
-    align-items: center;
+   
 
     &-item {
       margin: 0 auto;

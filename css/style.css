@@ -194,7 +194,8 @@ body {
   .aboutme__image-pic {
     width: 45rem;
     border-radius: 3px;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    image-orientation: from-image; }
     @media only screen and (max-width: 56.25em) {
       .aboutme__image-pic {
         width: 50%; } }
@@ -215,9 +216,9 @@ body {
     margin-top: 2rem;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 15rem);
     grid-template-rows: 1fr;
-    align-items: center; }
+    justify-content: center; }
     .aboutme__right__network-item {
       margin: 0 auto;
       width: 6.5rem;
